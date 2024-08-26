@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="Signup.html">
+                    <img src="plane.png" alt="Logo" class="logo-img"> 
+                    <span class="logo-name">TOURIST</span> 
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Booking.html">Booking</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="Login.html" class="login">Login</a>
+                <a href="Signup.html" class="signup">Signup</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left-side">
+            <img src="plane.png" alt="Signup Image">
+        </div>
+        <div class="right-side">
+            <form id="signupForm">
+                <div class="row">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="row">
+                    <label for="contact">Contact:</label>
+                    <input type="text" id="contact" name="c ontact" required>
+                </div>
+                <div class="row">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="row">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="row">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div class="row">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="row">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Tourist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script >document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var firstName = document.getElementById('firstName').value.trim();
+        var lastName = document.getElementById('lastName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var contact = document.getElementById('contact').value.trim();
+        var address = document.getElementById('address').value.trim();
+        var city = document.getElementById('city').value.trim();
+        var country = document.getElementById('country').value.trim();
+        var dob = document.getElementById('dob').value.trim();
+    
+      
+        if (firstName === "" || lastName === "" || email === "" || contact === "" || address === "" || city === "" || country === "" || dob === "") {
+            alert("Please fill in all fields."); 
+        } else {
+            alert("Signup Successful!"); 
+        }
+    });
+    </script>
+</body>
+</html>

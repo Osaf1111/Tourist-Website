@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="Login.html">
+                    <img src="plane.png" alt="Logo" class="logo-img">
+                    <span class="logo-name">TOURIST</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Booking.html">Booking</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="login">Login</a>
+                <a href="Signup.html" class="signup">Signup</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="logo-section">
+                <img src="plane.png" alt="Logo" class="logo-img-large">
+            </div>
+            <div class="login-container">
+                <h2>Login</h2><br>
+                <form id="loginForm">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                    <br>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Tourist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var validEmail = 'osafimran1111@gmail.com';
+            var validPassword = 'osaf1111';
+            if (email === validEmail && password === validPassword) {
+                alert('Login successfull!');
+            } else {
+                alert('incorrect email or password Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
